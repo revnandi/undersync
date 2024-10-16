@@ -1,0 +1,154 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('assets/PPMori-Regular.woff2') format('woff2'),
+      url('assets/PPMori-Regular.woff') format('woff'),
+      url('assets/PPMori-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  background-color: #161515;
+  color: #E6DA5C;
+  font-family: "PP Mori", sans-serif;
+}
+
+
+html {
+  block-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100%;
+}
+
+a {
+  color: #E6DA5C;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-inline-start: 1rem;
+  padding-block-start: 1rem;
+  padding-inline-end: 1.5rem;
+}
+
+main {
+  display: flex;
+  margin-block-start: auto;
+}
+
+.usp-logo {
+  max-inline-size: 22rem;
+}
+
+
+.usp-logo-img {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.top-description {
+  display: flex;
+  gap: 6rem;
+  text-align: end;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.left-links {
+  display: flex;
+  flex-direction: column;
+  column-gap: 6rem;
+  inline-size: 100%;
+  font-size: 1.75rem;
+  margin-block-start: 5.75rem;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+  padding-block-end: 1.5rem;
+  padding-inline-start: 1rem;
+}
+
+.labels__title {
+  font-size: 1.75rem;
+}
+
+.labels__name {
+  font-size: 1.75rem;
+  text-align: end;
+}
+
+.labels__name * {
+  margin-inline-end: -1rem;
+}
+
+.labels__items {
+  display: grid;
+  grid-template-columns: repeat(3, 20.5rem);
+  gap: 1.25rem;
+  padding-inline-end: 1.5rem;
+}
