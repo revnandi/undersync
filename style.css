@@ -56,7 +56,8 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: 'PP Mori';
   src: url('assets/PPMori-Regular.woff2') format('woff2'),
       url('assets/PPMori-Regular.woff') format('woff'),
-      url('assets/PPMori-Regular.otf') format('otf');
+      url('assets/PPMori-Regular.otf') format('otf'),
+      url('assets/PPMori-Regular.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -127,6 +128,7 @@ main {
 
 .labels {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   inline-size: 100%;
   padding-block-end: 1.5rem;
@@ -147,8 +149,31 @@ main {
 }
 
 .labels__items {
-  display: grid;
-  grid-template-columns: repeat(3, 20.5rem);
+  display: flex;
   gap: 1.25rem;
   padding-inline-end: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .labels__items {
+    display: grid;
+    grid-template-columns: repeat(3, 10rem);
+  }
+}
+
+@media (min-width: 1028px) {
+  .labels {
+    flex-wrap: nowrap
+  }
+
+  .labels__items {
+    display: grid;
+    grid-template-columns: repeat(3, 16rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .labels__items {
+    grid-template-columns: repeat(3, 20.5rem);
+  }
 }
