@@ -63,12 +63,21 @@ p, h1, h2, h3, h4, h5, h6 {
   font-display: swap;
 }
 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  block-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  inline-size: 1px;
+}
+
 html, body {
   background-color: #161515;
   color: #E6DA5C;
   font-family: "PP Mori", sans-serif;
 }
-
 
 html {
   block-size: 100%;
