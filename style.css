@@ -124,6 +124,11 @@ main {
   inline-size: 100%;
   font-size: 1.75rem;
   margin-block-start: 5.75rem;
+  line-height: 1;
+}
+
+.left-links__link {
+  margin-block-end: 1rem;
 }
 
 .labels {
@@ -142,6 +147,8 @@ main {
 .labels__name {
   font-size: 1.75rem;
   text-align: end;
+  line-height: 1;
+  margin-block-end: 0.5rem;
 }
 
 .labels__name * {
@@ -152,6 +159,23 @@ main {
   display: flex;
   gap: 1.25rem;
   padding-inline-end: 1.5rem;
+}
+
+.with-arrow {
+  position: relative;
+  display: inline-block;
+  padding-inline-start: 2rem;
+}
+
+.with-arrow::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: .25rem;
+  background-image: url("assets/arrow.svg");
+  background-repeat: no-repeat;
+  inline-size: 20px;
+  block-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
