@@ -94,22 +94,27 @@ a {
   text-decoration: none;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-inline-start: 1rem;
   padding-block-start: 1rem;
-  padding-inline-end: 1.5rem;
+  padding-inline-end: 1rem;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
 }
 
 main {
   display: flex;
-  margin-block-start: auto;
 }
 
 .usp-logo {
-  max-inline-size: 16rem;
+  max-inline-size: calc(50% - 1rem);
 }
 
 
@@ -120,9 +125,10 @@ main {
 
 .top-description {
   display: flex;
-  gap: 6rem;
+  flex-direction: column;
+  gap: 1rem;
   text-align: end;
-  font-size: 1.25rem;
+  font-size: .875rem;
   line-height: 1.2;
 }
 
@@ -131,26 +137,34 @@ main {
   flex-direction: column;
   column-gap: 6rem;
   inline-size: 100%;
-  font-size: 1.25rem;
-  margin-block-start: 5.75rem;
+  font-size: .875rem;
   line-height: 1;
 }
 
 .left-links__link {
   margin-block-end: 1rem;
+  display: inline-block;
+  inline-size: fit-content;
 }
 
 .labels {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  text-align: end;
   justify-content: space-between;
   inline-size: 100%;
   padding-block-end: 1.5rem;
   padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
 }
 
 .labels__title {
-  font-size: 1.25rem;
+  inline-size: fit-content;
+  font-size: .875rem;
+  margin-inline-start: auto;
+  margin-block-start: -2rem;
+  margin-block-end: 1rem;
 }
 
 .labels__name {
@@ -161,19 +175,76 @@ main {
 }
 
 .labels__name * {
-  margin-inline-end: -1rem;
+  font-size: .875rem;
 }
 
 .labels__items {
   display: flex;
+  flex-direction: column;
+  align-items: end;
   gap: 1.25rem;
-  padding-inline-end: 1.5rem;
+}
+
+.labels__item {
+  max-inline-size: calc(50% - 1rem);
 }
 
 @media (min-width: 768px) {
+  main {
+    margin-block-start: auto;
+  }
+
+  .header {
+    padding-inline-end: 1.5rem;
+  }
+
+  .usp-logo {
+    max-inline-size: 16rem;
+  }
+
+  .top-description {
+    flex-direction: row;
+    gap: 6rem;
+    text-align: end;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .labels {
+    flex-direction: row;
+    text-align: initial;
+    padding-inline-end: 0;
+  }
+
+  .labels__title {
+    font-size: 1.25rem;
+    margin-inline-start: initial;
+    margin-block-start: initial;
+    margin-block-end: initial;
+  }
+
   .labels__items {
     display: grid;
     grid-template-columns: repeat(3, 10rem);
+    padding-inline-end: 1.5rem;
+  }
+
+  .labels__name {
+    font-size: 1.25rem;
+  }
+
+
+.labels__name * {
+  margin-inline-end: -1rem;
+}
+
+  .labels__item {
+    max-inline-size: inherit;
+  }
+
+  .left-links {
+    margin-block-start: 5.75rem;
+    font-size: 1.25rem;
   }
 }
 
