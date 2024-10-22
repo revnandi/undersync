@@ -220,6 +220,7 @@ main {
     flex-direction: row;
     text-align: initial;
     padding-inline-end: 0;
+    justify-content: flex-end;
   }
 
   .labels__title {
@@ -227,6 +228,7 @@ main {
     margin-inline-start: initial;
     margin-block-start: initial;
     margin-block-end: initial;
+    margin-inline-end: auto;
   }
 
   .labels__items {
