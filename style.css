@@ -198,6 +198,12 @@ main {
     padding-inline-end: 1.5rem;
   }
 
+  .header__top {
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .usp-logo {
     max-inline-size: 16rem;
   }
@@ -225,7 +231,7 @@ main {
 
   .labels__items {
     display: grid;
-    grid-template-columns: repeat(3, 10rem);
+    grid-template-columns: repeat(3, 12rem);
     padding-inline-end: 1.5rem;
   }
 
@@ -233,10 +239,10 @@ main {
     font-size: 1.25rem;
   }
 
-
-.labels__name * {
-  margin-inline-end: -1rem;
-}
+  .labels__name * {
+    margin-inline-end: -1rem;
+    font-size: 1.25rem;
+  }
 
   .labels__item {
     max-inline-size: inherit;
@@ -277,6 +283,11 @@ main {
   }
   
   .labels__name {
+    font-size: 1.75rem;
+  }
+
+  .labels__name * {
+    margin-inline-end: -1rem;
     font-size: 1.75rem;
   }
 
