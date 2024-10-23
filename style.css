@@ -169,6 +169,7 @@ main {
 }
 
 .labels__name {
+  font-weight: 400;
   font-size: 1.25rem;
   text-align: end;
   line-height: 1;
@@ -225,6 +226,7 @@ main {
   }
 
   .labels__title {
+    font-weight: 400;
     font-size: 1.25rem;
     margin-inline-start: initial;
     margin-block-start: initial;
