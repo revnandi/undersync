@@ -99,9 +99,9 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-inline-start: 1rem;
-  padding-block-start: 1rem;
-  padding-inline-end: 1rem;
+  padding-inline-start: 0.5rem;
+  padding-block-start: 0.5rem;
+  padding-inline-end: 0.5rem;
 }
 
 .header__top {
@@ -143,7 +143,7 @@ main {
 }
 
 .left-links__link {
-  margin-block-end: 1rem;
+  margin-block-end: 1.25rem;
   display: inline-block;
   inline-size: fit-content;
 }
@@ -155,12 +155,13 @@ main {
   text-align: end;
   justify-content: space-between;
   inline-size: 100%;
-  padding-block-end: 1.5rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+  padding-block-end: .75rem;
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
 }
 
 .labels__title {
+  font-weight: 400;
   inline-size: fit-content;
   font-size: .875rem;
   margin-inline-start: auto;
@@ -173,7 +174,7 @@ main {
   font-size: 1.25rem;
   text-align: end;
   line-height: 1;
-  margin-block-end: 0.5rem;
+  margin-block-end: .25rem;
 }
 
 .labels__name * {
@@ -184,7 +185,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 1.25rem;
+  gap: .5625rem;
 }
 
 .labels__item {
@@ -197,7 +198,7 @@ main {
   }
 
   .header {
-    padding-inline-end: 1.5rem;
+    padding-inline-end: .75rem;
   }
 
   .header__top {
@@ -207,14 +208,13 @@ main {
   }
 
   .usp-logo {
-    max-inline-size: 16rem;
+    max-inline-size: 10.25rem;
   }
 
   .top-description {
     flex-direction: row;
     gap: 6rem;
     text-align: end;
-    font-size: 1.25rem;
     line-height: 1.2;
   }
 
@@ -226,8 +226,6 @@ main {
   }
 
   .labels__title {
-    font-weight: 400;
-    font-size: 1.25rem;
     margin-inline-start: initial;
     margin-block-start: initial;
     margin-block-end: initial;
@@ -236,17 +234,8 @@ main {
 
   .labels__items {
     display: grid;
-    grid-template-columns: repeat(3, 12rem);
-    padding-inline-end: 1.5rem;
-  }
-
-  .labels__name {
-    font-size: 1.25rem;
-  }
-
-  .labels__name * {
-    margin-inline-end: -1rem;
-    font-size: 1.25rem;
+    grid-template-columns: repeat(3, 10.25rem);
+    padding-inline-end: .75rem;
   }
 
   .labels__item {
@@ -254,8 +243,7 @@ main {
   }
 
   .left-links {
-    margin-block-start: 5.75rem;
-    font-size: 1.25rem;
+    margin-block-start: 42px;
   }
 }
 
@@ -263,40 +251,11 @@ main {
   .labels {
     flex-wrap: nowrap
   }
-
-  .labels__items {
-    display: grid;
-    grid-template-columns: repeat(3, 14rem);
-  }
 }
 
 @media (min-width: 1440px) {
-  .usp-logo {
-    max-inline-size: 22rem;
-  }
-
   .top-description {
-    font-size: 1.75rem;
-  }
-  
-  .left-links {
-    font-size: 1.75rem;
-  }
-
-  .labels__title {
-    font-size: 1.75rem;
-  }
-  
-  .labels__name {
-    font-size: 1.75rem;
-  }
-
-  .labels__name * {
-    margin-inline-end: -1rem;
-    font-size: 1.75rem;
-  }
-
-  .labels__items {
-    grid-template-columns: repeat(3, 20.5rem);
+    font-size: .875rem;
+    gap: 3rem;
   }
 }
