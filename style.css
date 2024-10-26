@@ -171,21 +171,17 @@ main {
 
 .labels__name {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: .875rem;
   text-align: end;
   line-height: 1;
-  margin-block-end: .25rem;
-}
-
-.labels__name * {
-  font-size: .875rem;
+  margin-block-end: .5rem;
 }
 
 .labels__items {
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: .5625rem;
+  gap: 1em
 }
 
 .labels__item {
@@ -236,10 +232,15 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 10.25rem);
     padding-inline-end: .75rem;
+    gap: .5625rem;
   }
 
   .labels__item {
     max-inline-size: inherit;
+  }
+
+  .labels__name {
+    margin-block-end: .25rem;
   }
 
   .left-links {
