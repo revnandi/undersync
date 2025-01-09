@@ -27,7 +27,7 @@ body {
 */
 img, picture, video, canvas, svg {
   display: block;
-  max-inline-size: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -99,9 +99,9 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-inline-start: 0.5rem;
-  padding-block-start: 0.5rem;
-  padding-inline-end: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .header__top {
@@ -110,12 +110,8 @@ a {
   inline-size: 100%;
 }
 
-main {
-  display: flex;
-}
-
 .usp-logo {
-  max-inline-size: calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
 }
 
 
@@ -140,12 +136,21 @@ main {
   inline-size: 100%;
   font-size: .875rem;
   line-height: 1;
+  padding-left: 0.5rem;
 }
 
 .left-links__link {
-  margin-block-end: 1.25rem;
+  margin-bottom: 1.25rem;
   display: inline-block;
   inline-size: fit-content;
+}
+
+.labels-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding-bottom: 1.25rem;
 }
 
 .labels {
@@ -155,18 +160,19 @@ main {
   text-align: end;
   justify-content: space-between;
   inline-size: 100%;
-  padding-block-end: .75rem;
-  padding-inline-start: 0.5rem;
-  padding-inline-end: 0.5rem;
+  padding-bottom: .75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1.1875rem;
 }
 
 .labels__title {
   font-weight: 400;
   inline-size: fit-content;
   font-size: .875rem;
-  margin-inline-start: auto;
-  margin-block-start: -2rem;
-  margin-block-end: 1rem;
+  margin-left: auto;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
 }
 
 .labels__name {
@@ -174,7 +180,7 @@ main {
   font-size: .875rem;
   text-align: end;
   line-height: 1;
-  margin-block-end: .5rem;
+  margin-bottom: .5rem;
 }
 
 .labels__items {
@@ -185,16 +191,16 @@ main {
 }
 
 .labels__item {
-  max-inline-size: calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
 }
 
 @media (min-width: 768px) {
   main {
-    margin-block-start: auto;
-  }
-
-  .header {
-    padding-inline-end: .75rem;
+    display: flex;
+    margin-top: 4.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .header__top {
@@ -204,7 +210,7 @@ main {
   }
 
   .usp-logo {
-    max-inline-size: 10.25rem;
+    max-width: 10.25rem;
   }
 
   .top-description {
@@ -214,37 +220,48 @@ main {
     line-height: 1.2;
   }
 
+  .labels-container {
+    height: auto;
+    display: initial;
+  }
+
   .labels {
-    flex-direction: row;
     text-align: initial;
-    padding-inline-end: 0;
+    padding-right: 0;
     justify-content: flex-end;
   }
 
   .labels__title {
-    margin-inline-start: initial;
-    margin-block-start: initial;
-    margin-block-end: initial;
-    margin-inline-end: auto;
+    margin-left: initial;
+    margin-top: initial;
+    margin-bottom: initial;
+    margin-right: auto;
   }
 
   .labels__items {
     display: grid;
-    grid-template-columns: repeat(3, 10.25rem);
-    padding-inline-end: .75rem;
+    grid-template-columns: repeat(4, 10.25rem);
+    /* padding-inline-end: .75rem; */
     gap: .5625rem;
   }
 
+  .labels__items--short {
+    grid-template-columns: repeat(2, 10.25rem);
+    width: fit-content;
+    margin-left: auto;
+  }
+
   .labels__item {
-    max-inline-size: inherit;
+    max-width: inherit;
   }
 
   .labels__name {
-    margin-block-end: .25rem;
+    text-align: start;
+    margin-bottom: .25rem;
   }
 
   .left-links {
-    margin-block-start: 42px;
+    padding-left: 0;
   }
 }
 
@@ -252,11 +269,61 @@ main {
   .labels {
     flex-wrap: nowrap
   }
+  
 }
 
 @media (min-width: 1440px) {
   .top-description {
     font-size: .875rem;
     gap: 3rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+
+  .usp-logo {
+    max-width: 21.875rem;
+  }
+
+  .left-links {
+    font-size: 1.75rem;
+  }
+
+  .top-description {
+    display: grid;
+    grid-template-columns: repeat(2, 19.1875rem);
+    gap: 1.1875rem;
+    font-size: 1.75rem;
+    gap: 3rem;
+  }
+
+  .labels__items {
+    grid-template-columns: repeat(4, 20.375rem);
+    gap: 1.1875rem;
+  }
+
+  .labels__items--short {
+    grid-template-columns: repeat(2, 20.375rem);
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .labels__title {
+    font-size: 1.75rem;
+  }
+
+  .labels__name {
+    font-size: 1.75rem;
   }
 }
