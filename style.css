@@ -149,7 +149,7 @@ a {
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 1rem;
   padding-bottom: 1.25rem;
 }
 
@@ -171,8 +171,11 @@ a {
   inline-size: fit-content;
   font-size: .875rem;
   margin-left: auto;
-  margin-top: -2rem;
   margin-bottom: 1rem;
+}
+
+.labels-container .labels:first-child .labels__title {
+  margin-top: -2rem
 }
 
 .labels__name {
@@ -192,6 +195,10 @@ a {
 
 .labels__item {
   max-width: calc(50% - 1rem);
+}
+
+.labels__image-container, .labels__image-container img  {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -236,6 +243,10 @@ a {
     margin-top: initial;
     margin-bottom: initial;
     margin-right: auto;
+  }
+
+  .labels-container .labels:first-child .labels__title {
+    margin-top: 0
   }
 
   .labels__items {
